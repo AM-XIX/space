@@ -1,0 +1,76 @@
+:root {
+    --main:#201B2D;
+    --second:#C2C7DA;
+    --font:'Spartan', sans-serif;
+}
+
+body {
+    background-color:var(--main);
+    margin:0;
+    color:white;
+    font-family:var(--font);
+}
+
+h1 {
+    font-size:0.875rem;
+}
+
+h1, h2 {
+    font-weight:900;
+}
+
+section {
+    display:flex;
+    width:100vw;
+    justify-content: space-between;
+}
+
+.space {
+    width:60vw;
+    height:100vh;
+    background-image:url("medias/nasa-image.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.introduction {
+    width:40vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:32px;
+    margin-right:32px;
+}
+
+.quote {
+    border-left:8px solid white;
+    padding-left:24px;
+    
+}
+
+.credits {
+    line-height: 13px;
+    font-size:0.75rem;
+    font-weight:700;
+}
+
+.credits p:first-of-type, .quote p:nth-child(2) {
+    color:var(--second);
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        height:100vh;
+        width:100vw;
+    }
+
+    section {
+      flex-direction:column;
+    }
+
+    .introduction, .space {
+        width:100vw;
+        height:50vh;
+    }
+  }
